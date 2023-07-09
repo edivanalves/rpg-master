@@ -88,8 +88,8 @@ window.onload = function () {
         player.image = new Surface(game.spriteSheetWidth, game.spriteSheetHeight);
         player.image.draw(game.assets['sprites.png']);
 
-        player.name = "Steve"
-        player.characterClass = "Knight";
+        player.name = "chico"
+        player.characterClass = "comedor de casadas";
         player.exp = 0;
         player.level = 1;
         player.gp = 100;
@@ -248,7 +248,7 @@ window.onload = function () {
 
     var greeter = {
         action: function () {
-            npc.say("hello");
+            npc.say("vai tomar no cú");
         }
     };
 
