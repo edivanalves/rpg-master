@@ -9,9 +9,9 @@ window.onload = function () {
     game.spriteSheetHeight = 16;
     game.itemSpriteSheetWidth = 64;
     game.preload(['sprites.png', 'items.png']);
-    game.items = [{ price: 100, description: "Faca", id: 0 },
-                 { price: 200, description: "Luva.prata", id: 1 },
-                 { price: 70, description: "Gelo Magic", id: 2 },
+    game.items = [{ price: 200, description: "Faca", id: 0 },
+                 { price: 100, description: "Luva.verde", id: 1 },
+                 { price: 70, description: "Magia", id: 2 },
                  { price: 60, description: " Pano Xadrez", id: 3 }]
     game.fps = 20;
     game.spriteWidth = 16;
@@ -88,8 +88,8 @@ window.onload = function () {
         player.image = new Surface(game.spriteSheetWidth, game.spriteSheetHeight);
         player.image.draw(game.assets['sprites.png']);
 
-        player.name = "Steve"
-        player.characterClass = "Knight";
+        player.name = "chico"
+        player.characterClass = "Pesão";
         player.exp = 0;
         player.level = 1;
         player.gp = 100;
