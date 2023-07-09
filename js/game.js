@@ -9,10 +9,10 @@ window.onload = function () {
     game.spriteSheetHeight = 16;
     game.itemSpriteSheetWidth = 64;
     game.preload(['sprites.png', 'items.png']);
-    game.items = [{ price: 1000, description: "Hurter", id: 0 },
-                 { price: 5000, description: "Drg. Paw", id: 1 },
-                 { price: 5000, description: "Ice Magic", id: 2 },
-                 { price: 60, description: "Chess Set", id: 3 }]
+    game.items = [{ price: 100, description: "Faca", id: 0 },
+                 { price: 200, description: "Luva.prata", id: 1 },
+                 { price: 70, description: "Gelo Magic", id: 2 },
+                 { price: 60, description: " Pano Xadrez", id: 3 }]
     game.fps = 20;
     game.spriteWidth = 16;
     game.spriteHeight = 16;
@@ -88,8 +88,8 @@ window.onload = function () {
         player.image = new Surface(game.spriteSheetWidth, game.spriteSheetHeight);
         player.image.draw(game.assets['sprites.png']);
 
-        player.name = "chico"
-        player.characterClass = "comedor de casadas";
+        player.name = "Steve"
+        player.characterClass = "Knight";
         player.exp = 0;
         player.level = 1;
         player.gp = 100;
@@ -248,7 +248,7 @@ window.onload = function () {
 
     var greeter = {
         action: function () {
-            npc.say("vai tomar no cú");
+            npc.say("  fala Cuzão");
         }
     };
 
@@ -304,16 +304,16 @@ window.onload = function () {
             player.exp += player.currentEnemy.exp;
             player.gp += player.currentEnemy.gp;
             player.currentEnemy.hp = player.currentEnemy.maxHp;
-            player.statusLabel.text = "You won!<br />" +
-              "You gained " + player.currentEnemy.exp + " exp<br />" +
-              "and " + player.currentEnemy.gp + " gold pieces!";
+            player.statusLabel.text = "Você ganhou!<br />" +
+              "você ganhou " + player.currentEnemy.exp + " exp<br />" +
+              "é " + player.currentEnemy.gp + " peças de ouro!";
             player.statusLabel.height = 45;
             if (player.exp > player.levelStats[player.level].expMax && player.level < player.levelStats.length - 1)
             {
                 player.level += 1;
                 player.statusLabel.text = player.statusLabel.text +
-                    "<br />And you gained a level!" +
-                    "<br />You are now at level " + player.level + "!";
+                    "<br />E você ganhou um nível!" +
+                    "<br />Você está agora no nível " + player.level + "!";
                 player.statusLabel.height = 75;
             }
         };
@@ -323,7 +323,7 @@ window.onload = function () {
             player.hp = player.levelStats[player.level].maxHp;
             player.mp = player.levelStats[player.level].maxMp;
             player.gp = Math.round(player.gp / 2);
-            player.statusLabel.text = "You lost!";
+            player.statusLabel.text = "Você perdeu!";
             player.statusLabel.height = 12;
         };
 
@@ -331,7 +331,7 @@ window.onload = function () {
             var currentEnemy = player.currentEnemy;
             var playerHit = battle.hitStrength(player.attack());
             currentEnemy.hp = currentEnemy.hp - playerHit;
-            battle.menu.text = "You did " + playerHit + " damage!";
+            battle.menu.text = "Você fez " + playerHit + " DANO!";
             if (currentEnemy.hp <= 0) {
                 battle.won();
             };
@@ -341,14 +341,14 @@ window.onload = function () {
             var currentEnemy = player.currentEnemy;
             var enemyHit = battle.hitStrength(currentEnemy.attack);
             player.hp = player.hp - enemyHit;
-            battle.menu.text = "You took " + enemyHit + " damage!";
+            battle.menu.text = "Você pegou " + enemyHit + " DANO!";
             if (player.hp <= 0) {
                 battle.lost();
             };
         };
 
         battle.actions = [{
-            name: "Fight", action: function () {
+            name: "LUTAR", action: function () {
                 battle.wait = true;
                 battle.playerAttack();
 
@@ -371,8 +371,8 @@ window.onload = function () {
             }
         },
         {
-            name: "Magic", action: function () {
-                battle.menu.text = "You don't know any magic yet!";
+            name: "MAGIA", action: function () {
+                battle.menu.text = "Você ainda não conhece nenhuma mágia!";
                 battle.wait = true;
                 battle.activeAction = 0;
 
@@ -383,14 +383,16 @@ window.onload = function () {
             }
         },
         {
-            name: "Run", action: function () {
-                game.pause();
-                player.statusLabel.text = "You ran away!";
-                player.statusLabel.height = 12;
+            "name": "CORRER",
+            "action": function() {
+              game.pause();
+              player.statusLabel.text = "haha FUGIU!";
+              player.statusLabel.height = 12;
                 battle.menu.text = "";
-                game.popScene();
+              game.popScene();
             }
-        }
+          }
+          
         ];
 
         battle.listActions = function () {
@@ -491,7 +493,7 @@ window.onload = function () {
         shop.itemSelected = 0;
 
         shop.shoppingFunds = function () {
-            return "Gold: " + player.gp;
+            return "Ouro: " + player.gp;
         };
 
         shop.drawManeki = function () {
@@ -592,10 +594,10 @@ window.onload = function () {
             }
         };
 
-        shop.greeting = "Hi!  I'm Maneki. Meow. I sell things.";
-        shop.apology = "Meow... sorry, you don't have the money for this.";
-        shop.sale = "Here ya go!";
-        shop.farewell = "Come again! Meow!";
+        shop.greeting = "Oi! Eu sou o xano. Miau. eu vendo coisas.";
+        shop.apology = "Miau... desculpe, você não tem dinheiro para isso.";
+        shop.sale = "Aqui está!";
+        shop.farewell = "Volte novamente! Miau!";
         shop.message = new Label(shop.greeting);
         shop.drawManeki();
 
