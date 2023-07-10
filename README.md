@@ -1,8 +1,5 @@
 # RPG in JavaScript -> Enchant.js:
 
-## Demo online:
-https://gabrieldarezzo.github.io/rpg/
-
 ## Example Photo
 
 [![Demo do Game](docs/demo-game.png)](https://gabrieldarezzo.github.io/rpg/)
@@ -16,12 +13,10 @@ Usar o `Enchant.js` e apartir das sprites:
 Criar uma especie de RPG.
 
 
-### YouTube:
-https://www.youtube.com/watch?v=x2EbfsQbsLI&list=PLsrZV8shpwjMxD9LZ6qsKrtWR7xQEv192
 
 
 Provavelmente o `Enchant.js` como  ferramenta hoje já está obsoleta.
-Mas as ideias de de gameLoop, Sprites, collision são muito bem exemplificadas no decorrer do curso.
+Mas as ideias de de gameLoop, Sprites, 
  
 Recomendo dar uma olhada nessas libs:
  * https://phaser.io/  
