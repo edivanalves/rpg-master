@@ -10,7 +10,7 @@
 Usar o `Enchant.js` e apartir das sprites:
 ![Sprites](sprites.png)   
 ![Items](items.png)   
-Criar uma especie de RPG.
+
 
 
 
