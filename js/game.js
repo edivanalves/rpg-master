@@ -10,7 +10,7 @@ window.onload = function () {
     game.itemSpriteSheetWidth = 64;
     game.preload(['sprites.png', 'items.png']);
     game.items = [{ price: 200, description: "Faca", id: 0 },
-                 { price: 100, description: "Luva.verde", id: 1 },
+                 { price: 100, description: "Luva", id: 1 },
                  { price: 70, description: "Magia", id: 2 },
                  { price: 60, description: " Pano Xadrez", id: 3 }]
     game.fps = 20;
@@ -123,7 +123,7 @@ window.onload = function () {
           "<br />--Exp: " + player.exp +
           "<br />--Level: " + player.level +
           "<br />--GP: " + player.gp +
-          "<br /><br />--Inventory:";
+          "<br /><br />--Inventorio:";
         player.statusLabel.height = 170;
         player.showInventory(0);
     };
