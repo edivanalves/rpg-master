@@ -2,7 +2,7 @@
 
 ## Example Photo
 
-[![Demo do Game](docs/demo-game.png)](https://gabrieldarezzo.github.io/rpg/)
+[![Demo do Game](docs/demo-game.png)
 
 
 
