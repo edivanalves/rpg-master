@@ -1,8 +1,5 @@
 # RPG in JavaScript -> Enchant.js:
 
-## Demo online:
-https://gabrieldarezzo.github.io/rpg/
-
 ## Example Photo
 
 [![Demo do Game](docs/demo-game.png)](https://gabrieldarezzo.github.io/rpg/)
